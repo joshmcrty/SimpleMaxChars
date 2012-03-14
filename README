@@ -1,0 +1,5 @@
+SimpleMaxChars jQuery plugin
+Author: Josh McCarty
+Website: http://joshmccarty.com
+
+This plugin adds a message displaying the number of characters remaining in an input or textarea when they have a maxlength set.
