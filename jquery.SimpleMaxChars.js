@@ -1,7 +1,13 @@
-﻿// SimpleMaxChars jQuery Plugin
-// Copyright (c)2011 by Josh McCarty
-// http://joshmccarty.com
-// Tested with jQuery 1.7, IE8+, Chrome 17
+﻿/**
+ * SimpleMaxChars jQuery Plugin
+ * http://joshmccarty.com
+ *
+ * Copyright (c)2012, Josh McCarty
+ * License: GPL Version 2
+ * http://www.gnu.org/licenses/gpl-2.0.txt
+ *
+ * Tested with jQuery 1.7.1, IE8+, Chrome 17
+ */
 
 ;( function( $ ) {
 	$.fn.SimpleMaxChars = function( options ) {
@@ -65,7 +71,7 @@
 			});
 		});
 		
-	}
+	};
 	
 	// Private function to display debugging information
 	function debug( $obj, opts ) {
@@ -82,6 +88,7 @@
 		
 		var remainingChars = maxLength - chars;
 		var lineBreak = "";
+		var html = "";
 		var messageClass = opts.messageClass;
 		if ( opts.lineBreak === true ) {
 			lineBreak = '<br />';
@@ -91,7 +98,7 @@
 		}
 		html = lineBreak + '<span class="' + messageClass + '">' + remainingChars + ' characters remaining.</span>';
 		return html;
-	}
+	};
 
 	// Default plugin options
 	// Can be overwritten with new defaults. Example: $.fn.SimpleMaxChars.defaults.warningClass = 'invalid';
@@ -103,6 +110,6 @@
 		warningClass: 'warning',
 		lineBreak: false,
 		debug: false
-	}
+	};
 
 })( jQuery );
