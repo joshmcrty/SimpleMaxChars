@@ -28,8 +28,8 @@
 			// Check for existing instances of messages to avoid ID collisions on the container element
 			var messageCount = $( '.' + opts.messageClass ).length;
 			messageCount++;
-			$this.after( '<span id="simple-maxchars-' + messageCount + '"></span>' );
-			var $container = $( '#simple-maxchars-' + messageCount );
+			$this.after( '<span id="' + opts.messageClass + '-' + messageCount + '"></span>' );
+			var $container = $( '#' + opts.messageClass + '-' + messageCount );
 			var maxLength = opts.maxChars;
 			
 			// Check for maxLength property if opts.maxChars is not specified
