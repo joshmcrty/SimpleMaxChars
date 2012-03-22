@@ -16,4 +16,4 @@ Highlights:
   - Can be used on multiple form elements with the same options
 - Has built-in options for basic customization
 - Remaining character message can be customized via $.fn.SimpleMaxChars.message = function(){ yourCustomFunction });
-- Tested with jQuery 1.7.1, IE8, IE9, Chrome 17
+- Tested with jQuery 1.6.2+, IE7+, Chrome 17, Firefox 8
