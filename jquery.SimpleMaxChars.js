@@ -6,7 +6,7 @@
  * License: GPL Version 2
  * http://www.gnu.org/licenses/gpl-2.0.txt
  *
- * Tested with jQuery 1.7.1, IE8+, Chrome 17
+ * Tested with jQuery 1.6.2+, IE7+, Chrome 17, Firefox 8
  */
 
 ;( function( $ ) {
