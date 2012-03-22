@@ -9,7 +9,11 @@ This plugin adds a message displaying the number of characters remaining in an i
 
 Highlights:
 - Less than 2KB minified.
+- Adds a warning class to the message when the character limit has nearly been reached (useful for changing the color of the message text via CSS)
 - Uses .prop() and .attr() correctly (.attr() is often used incorrectly for setting/getting DOM properties)
-- Can be used on individual elements with unique options for each element
-- Can be used on multiple elements with the same options
-- Message formatting function can be customized via $.fn.SimpleMaxChars.message = function(){ customFunction });
+- Multiple instances can be used on the same page
+  - Can be used on individual form elements with unique options for each element
+  - Can be used on multiple form elements with the same options
+- Has built-in options for basic customization
+- Remaining character message can be customized via $.fn.SimpleMaxChars.message = function(){ yourCustomFunction });
+- Tested with jQuery 1.7.1, IE8, IE9, Chrome 17
