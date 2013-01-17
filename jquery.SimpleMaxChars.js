@@ -86,11 +86,12 @@
 	// Can be overwritten with your own message function if you want. Example: $.fn.SimpleMaxChars.message = function( chars, opts, maxLength ) { doMyStuff; return myStuff; } );
 	$.fn.SimpleMaxChars.message = function( chars, opts, maxLength ) {
 		
-		var remainingChars = maxLength - chars;
-		    lineBreak = "";
-		    html = "";
+		var remainingChars = maxLength - chars,
+		    lineBreak = "",
+		    html = "",
 		    messageClass = opts.messageClass,
-		    remainingMessage = opts.remainingMessage.replace('__remaining_chars__', remainingChars)
+		    remainingMessage = opts.remainingMessage.replace('__remaining_chars__', remainingChars);
+		    
 		if ( opts.lineBreak === true ) {
 			lineBreak = '<br />';
 		}
