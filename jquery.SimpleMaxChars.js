@@ -87,16 +87,17 @@
 	$.fn.SimpleMaxChars.message = function( chars, opts, maxLength ) {
 		
 		var remainingChars = maxLength - chars;
-		var lineBreak = "";
-		var html = "";
-		var messageClass = opts.messageClass;
+		    lineBreak = "";
+		    html = "";
+		    messageClass = opts.messageClass,
+		    remainingMessage = opts.remainingMessage.replace('__remaining_chars__', remainingChars)
 		if ( opts.lineBreak === true ) {
 			lineBreak = '<br />';
 		}
 		if ( remainingChars < opts.warningLimit ) {
 			messageClass += " " + opts.warningClass;
 		}
-		html = lineBreak + '<span class="' + messageClass + '">' + remainingChars + ' characters remaining.</span>';
+		html = lineBreak + '<span class="' + messageClass + '">' + remainingMessage + '</span>';
 		return html;
 	};
 
@@ -108,6 +109,7 @@
 		warningLimit: 20,
 		messageClass: 'simple-maxchars-message',
 		warningClass: 'warning',
+		remainingMessage:'__remaining_chars__ characters remaining.',
 		lineBreak: false,
 		debug: false
 	};
